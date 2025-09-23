@@ -13,9 +13,11 @@
     <header class="header">
       <nav class="nav">
         <ul class="nav-list">
-          <li class="nav-list-item nav-list-active">главная</li>
-          <li class="nav-list-item">посмотреть лоты</li>
-          <li class="nav-list-item">об аукционе</li>
+          <li class="nav-list-item nav-list-active">
+            <a class="nav-list-active" href="">главная</a>
+          </li>
+          <li class="nav-list-item"><a href="">посмотреть лоты</a></li>
+          <li class="nav-list-item"><a href="">об аукционе</a></li>
         </ul>
       </nav>
       <a href="#" class="logo"
@@ -24,11 +26,13 @@
           src="images/logo-black.svg"
           alt="Логотип"
       /></a>
-      <ul class="contact-list">
-        <li class="underline">+9 999 555 5555</li>
-        <li class="underline">info@sobaka.ge</li>
-        <li>наб. Принсенграхт 263- 265, Амстердам</li>
-      </ul>
+      <address class="contact-list">
+        <p class="underline"><a href="tel:+99995555555">+9 999 555 5555</a></p>
+        <p class="underline">
+          <a href="mailto:info@sobaka.ge">info@sobaka.ge</a>
+        </p>
+        <p>наб. Принсенграхт 263-265, Амстердам</p>
+      </address>
     </header>
     <main>
       <section class="cover">
@@ -47,38 +51,52 @@
       <section class="lots">
         <h2 class="title-lots">ЛОТЫ</h2>
         <ul class="cards-lots">
-          <li class="card-item item01">
-            <h3 class="title-card-item">
-              Фильм режиссёра, который бросил киношколу
-            </h3>
-            <p class="card-item-text">
-              Не просто бросил, а ушёл с первой лекции. Какой была бы ваша
-              ставка, если бы вы не знали, что режиссёр — Пол Томас Андерсон?
-            </p>
-          </li>
-          <li class="card-item item02">
-            <h3 class="title-card-item">
-              Книга, где описан один скучный день из жизни рекламного агента
-            </h3>
-            <p class="card-item-text">
-              Объёмом почти в тысячу страниц. Иногда без знаков препинания и с
-              переходами на древнеанглийский. В ней одновременно рассказывается
-              о 16 июня 1904 года и об истории литературы, начиная с античных
-              времён. И это всё накладывается на эпическую поэму Гомера. Сколько
-              бы вы поставили на «Улисса» Джеймса Джойса?
-            </p>
-          </li>
-          <li class="card-item item03">
-            <h3 class="title-card-item">
-              Картина, которую повторит даже 5-летний сын маминой подруги
-            </h3>
-            <p class="card-item-text">
-              Ну действительно, там линия, тут кружочек, а здесь и вовсе что-то
-              похожее на инфузорию-туфельку. Никаких полей, лесов, котиков...
-              Сколько бы вы на такое поставили, если бы не знали, что это — одна
-              из революционных работ Кандинского?
-            </p>
-          </li>
+          <a href="#0"
+            ><li>
+              <article class="card-item card-item--movie">
+                <h3 class="title-card-item">
+                  Фильм режиссёра, который бросил киношколу
+                </h3>
+                <p class="card-item-text">
+                  Не просто бросил, а ушёл с первой лекции. Какой была бы ваша
+                  ставка, если бы вы не знали, что режиссёр — Пол Томас
+                  Андерсон?
+                </p>
+              </article>
+            </li></a
+          >
+          <a href="#0"
+            ><li>
+              <article class="card-item card-item--book">
+                <h3 class="title-card-item">
+                  Книга, где описан один скучный день из жизни рекламного агента
+                </h3>
+                <p class="card-item-text">
+                  Объёмом почти в тысячу страниц. Иногда без знаков препинания и
+                  с переходами на древнеанглийский. В ней одновременно
+                  рассказывается о 16 июня 1904 года и об истории литературы,
+                  начиная с античных времён. И это всё накладывается на
+                  эпическую поэму Гомера. Сколько бы вы поставили на «Улисса»
+                  Джеймса Джойса?
+                </p>
+              </article>
+            </li></a
+          >
+          <a href="#0"
+            ><li>
+              <article class="card-item card-item--art">
+                <h3 class="title-card-item">
+                  Картина, которую повторит даже 5-летний сын маминой подруги
+                </h3>
+                <p class="card-item-text">
+                  Ну действительно, там линия, тут кружочек, а здесь и вовсе
+                  что-то похожее на инфузорию-туфельку. Никаких полей, лесов,
+                  котиков... Сколько бы вы на такое поставили, если бы не знали,
+                  что это — одна из революционных работ Кандинского?
+                </p>
+              </article>
+            </li></a
+          >
         </ul>
         <a href="#0" class="card-more">посмотреть больше</a>
       </section>
@@ -91,7 +109,7 @@
           />
         </div>
         <div class="about-column">
-          <h3 class="about-title">об аукционе</h3>
+          <h2 class="about-title">об аукционе</h3>
           <div class="about-text">
             <p class="about-text-margin">
               Здесь вы не встретите очередное пафосное собрание невероятно
@@ -115,16 +133,21 @@
       </section>
     </main>
     <footer class="footer">
-      <ul class="contact-list contact-list-start">
-        <li class="underline">+9 999 555 5555</li>
-        <li class="underline">info@sobaka.ge</li>
-        <li>наб. Принсенграхт 263-265, Амстердам</li>
-      </ul>
-      <ul class="nav-list-footer">
-        <li class="nav-list-item nav-list-active">главная</li>
-        <li class="nav-list-item">посмотреть лоты</li>
-        <li class="nav-list-item">об аукционе</li>
-      </ul>
+      <address class="contact-list contact-list-start">
+        <p class="underline"><a href="tel:+99995555555">+9 999 555 5555</a></p>
+        <p class="underline">
+          <a href="mailto:info@sobaka.ge">info@sobaka.ge</a>
+        </p>
+        <p>наб. Принсенграхт 263-265, Амстердам</p>
+      </address>
+      <nav class="nav-footer"><ul class="nav-list-footer">
+        <li class="nav-list-item nav-list-active">
+          <a class="nav-list-active" href="">главная</a>
+        </li>
+        <li class="nav-list-item"><a href="">посмотреть лоты</a></li>
+        <li class="nav-list-item"><a href="">об аукционе</a></li>
+      </ul></nav>
+      
       <ul class="list-message">
         <li>
           <a href=""

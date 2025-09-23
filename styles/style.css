@@ -1,17 +1,3 @@
-/* для лучшего понимая */
-html {
-    background-color: #000;
-    z-index: -1;
-}
-
-/*  */
-body {
-    font-family: Raleway, sans-serif;
-    font-weight: 400;
-    background-color: white;
-    min-height: 100vh;
-}
-
 .header {
     padding: 92px 50px 96px;
     display: grid;
@@ -22,7 +8,6 @@ body {
 .nav-list {
     justify-self: start;
     display: flex;
-    width: 392px;
     gap: 32px;
     list-style-type: circle;
 }
@@ -66,12 +51,28 @@ body {
 }
 
 .cover {
-    padding: 165px 50px 50px 50px;
-    height: 757px;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../images/cover.jpg);
-    background-size: auto 100%;
-    background-repeat: no-repeat;
-    background-position: center;
+  position: relative;
+  min-height: 757px;
+  padding: 165px 50px 50px 50px;
+  color: #fff;
+  background: url(../images/cover.jpg) center/cover no-repeat;
+}
+
+.cover::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); 
+  z-index: 1;
+}
+
+.cover-title,
+.description {
+  position: relative;
+  z-index: 2; 
 }
 
 .cover-title {
@@ -102,7 +103,7 @@ body {
 
 .right {
     text-align: right;
-    margin-right: 0;
+    
 }
 
 .description {
@@ -124,8 +125,8 @@ body {
 }
 
 .description-button {
-    height: 51px;
-    border: 1px solid;
+    height: 51px; /* без точной высоты не получается подобрать точный размер */
+    border: 1px solid white;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -155,33 +156,58 @@ body {
 
 .cards-lots {
     display: flex;
+    flex-wrap: wrap;
     gap: 25px;
 }
 
+.cards-lots li {
+    list-style: none;
+}
+
 .card-item {
+    position: relative;
     width: 334px;
-    height: 596px;
+    min-height: 596px;
     display: flex;
     flex-direction: column;
-    background-position: center;
-    background-size: auto 100%;
-    background-repeat: no-repeat;
-    padding: 48px 40px;
     justify-content: space-between;
+    padding: 48px 40px;
     color: #fff;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
-.item01 {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../images/card-lot-01.jpg);
+.card-item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1;
 }
 
-.item02 {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../images/card-lot-02.jpg);
+.card-item h3,
+.card-item p {
+    position: relative;
+    z-index: 2;
 }
 
-.item03 {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../images/card-lot-03.jpg);
+
+.card-item--movie {
+    background-image: url(../images/card-lot-01.jpg);
 }
+
+.card-item--book {
+    background-image: url(../images/card-lot-02.jpg);
+}
+
+.card-item--art {
+    background-image: url(../images/card-lot-03.jpg);
+}
+
 
 .title-card-item {
     font-size: 22px;
@@ -196,7 +222,7 @@ body {
 }
 
 .card-more {
-    display: block;
+    display: inline-block;
     margin: 30px 0 0 40px;
     font-size: 20px;
     line-height: 100%;
@@ -244,15 +270,17 @@ body {
     margin-top: 100px;
     font-size: 20px;
     line-height: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
 }
 
 .about-text-margin {
-    margin-bottom: 30px;
     margin-right: 5px;
 }
 
 .footer {
-    height: 180px;
+    padding: 0 0 82px 0;
     margin: 0 50px;
     display: flex;
     justify-content: space-between;
