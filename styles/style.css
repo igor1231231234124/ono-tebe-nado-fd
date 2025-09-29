@@ -56,7 +56,6 @@
   padding: 165px 50px 50px 50px;
   background: url(../images/cover.jpg) center/cover no-repeat;
   color: #fff;
-  overflow: hidden;
 }
 
 .cover-overlay {
@@ -176,7 +175,6 @@
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  overflow: hidden;
 }
 
 .card-overlay {
